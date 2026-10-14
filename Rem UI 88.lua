@@ -3043,11 +3043,9 @@ print("remys bladeball")
 end
 
 do
-local REM_FILE = "rem_v6.lua"
-assert(isfile(REM_FILE), "Put " .. REM_FILE .. " in your Matcha workspace folder")
-loadstring(readfile(REM_FILE))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/daddysxgold/Blade-Ball-is-Easy/main/rem_v6.lua"))()
 local UI = Rem
-assert(UI and UI.Alive and tostring(UI.Version):match("^6%."), "Rem v6 failed to load from " .. REM_FILE)
+assert(UI and UI.Alive, "Rem UI failed to load")
 
 local lala = _G.autoParry or {}
 local hs = game:GetService("HttpService")
